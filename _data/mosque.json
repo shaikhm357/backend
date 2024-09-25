@@ -1,0 +1,117 @@
+[
+    {
+        "_id": "66f3bb5745fc51ef1dee15a9",
+        "image": "https://example.com/mosque.jpg",
+        "name": "Tawheed Ulwe Masjid",
+        "address": "Shop 10, At Post Cowk, Raj Heritage, Plot No 183, Taluka, Next to Bank of India, Sector 19, Ulwe Navi Mumbai Maharashtra 410206",
+        "todayNamazTimings": {
+            "fazar": "05:30 AM",
+            "zohar": "01:15 PM",
+            "asr": "04:30 PM",
+            "magrib": "06:45 PM",
+            "isha": "08:15 PM"
+        },
+        "jummaTimings": {
+            "numberOfJammat": 2,
+            "timings": [
+                "12:30 PM",
+                "01:30 PM"
+            ]
+        },
+        "eidUlAdhaTimings": {
+            "numberOfJammat": 3,
+            "timings": [
+                "06:30 AM",
+                "07:30 AM",
+                "08:30 AM"
+            ]
+        },
+        "eidUlFitrTimings": {
+            "numberOfJammat": 3,
+            "timings": [
+                "06:00 AM",
+                "07:00 AM",
+                "08:00 AM"
+            ]
+        },
+        "createdAt": "2024-09-25T07:27:19.279Z",
+        "updatedAt": "2024-09-25T07:27:19.279Z",
+        "__v": 0
+    },
+    {
+        "_id": "66f3efc8b446b2fea6a4912f",
+        "image": "https://example.com/masjid2.jpg",
+        "name": "Al-Furqan Masjid",
+        "address": "Sector 15, Block 12, Near Park, Navi Mumbai, Maharashtra 410220",
+        "todayNamazTimings": {
+            "fazar": "05:25 AM",
+            "zohar": "01:10 PM",
+            "asr": "04:20 PM",
+            "magrib": "06:35 PM",
+            "isha": "08:10 PM"
+        },
+        "jummaTimings": {
+            "numberOfJammat": 2,
+            "timings": [
+                "12:50 PM",
+                "01:50 PM"
+            ]
+        },
+        "eidUlAdhaTimings": {
+            "numberOfJammat": 3,
+            "timings": [
+                "06:00 AM",
+                "07:00 AM",
+                "08:00 AM"
+            ]
+        },
+        "eidUlFitrTimings": {
+            "numberOfJammat": 1,
+            "timings": [
+                "06:30 AM"
+            ]
+        },
+        "createdAt": "2024-09-25T11:11:04.784Z",
+        "updatedAt": "2024-09-25T11:11:04.784Z",
+        "__v": 0
+    },
+    {
+        "_id": "66f3efd9b446b2fea6a49131",
+        "image": "https://example.com/masjid3.jpg",
+        "name": "Masjid Usman",
+        "address": "Shop 25, Building 5, Sector 7, Nerul, Navi Mumbai, Maharashtra 410207",
+        "todayNamazTimings": {
+            "fazar": "05:20 AM",
+            "zohar": "01:20 PM",
+            "asr": "04:40 PM",
+            "magrib": "06:50 PM",
+            "isha": "08:20 PM"
+        },
+        "jummaTimings": {
+            "numberOfJammat": 3,
+            "timings": [
+                "12:40 PM",
+                "01:40 PM",
+                "02:40 PM"
+            ]
+        },
+        "eidUlAdhaTimings": {
+            "numberOfJammat": 2,
+            "timings": [
+                "06:20 AM",
+                "07:20 AM"
+            ]
+        },
+        "eidUlFitrTimings": {
+            "numberOfJammat": 3,
+            "timings": [
+                "06:10 AM",
+                "07:10 AM",
+                "08:10 AM"
+            ]
+        },
+        "createdAt": "2024-09-25T11:11:21.145Z",
+        "updatedAt": "2024-09-25T11:11:21.145Z",
+        "__v": 0
+    }
+]
