@@ -1,6 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv')
 const morgan = require('morgan')
+const fs = require('fs');
+const path = require('path');
 const mosque = require('./routes/mosqueRoutes.js')
 const errorHandler = require('./middleware/error.js')
 const connectDB = require('./config/db.js')
@@ -13,6 +15,15 @@ connectDB()
 
 // setup express
 const app = express()
+
+// Check if the 'public/uploads' folder exists, if not, create it
+const uploadsDir = path.join(__dirname, 'public/uploads');
+if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+// Serve static files from the public/uploads directory
+app.use('/uploads', express.static('public/uploads'));
 
 //body parser
 app.use(express.json())

@@ -1,6 +1,6 @@
 const express = require('express')
 const { getMosques, getMosque, createMosque, updateMosque,
-    deleteMosque } = require('../controllers/mosqueController')
+    deleteMosque, uploadImage } = require('../controllers/mosqueController.js')
 
 const router = express.Router()
 
@@ -14,5 +14,10 @@ router
     .get(getMosque)
     .put(updateMosque)
     .delete(deleteMosque)
+
+// Route for uploading images
+router
+    .route('/upload')
+    .post(uploadImage);
 
 module.exports = router
