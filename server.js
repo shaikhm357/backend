@@ -6,6 +6,7 @@ const path = require('path');
 const mosque = require('./routes/mosqueRoutes.js')
 const errorHandler = require('./middleware/error.js')
 const connectDB = require('./config/db.js')
+const userRoutes = require("./routes/userRoutes.js");
 
 // setup env
 dotenv.config({ path: './config/config.env' })
@@ -35,11 +36,12 @@ if (process.env.NODE_ENV == "development") {
 
 // mount routers
 app.use('/api/v1/mosque', mosque)
+app.use('api/v1',userRoutes)
 
 // errorHandler
 app.use(errorHandler)
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8000
 
 const server = app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
 
