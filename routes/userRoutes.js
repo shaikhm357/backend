@@ -1,4 +1,4 @@
-const express =require("express");
+const express = require("express");
 const {
   authUser,
   updateUser,
@@ -8,15 +8,18 @@ const {
   updateUserProfile,
   getUserProfile,
   logoutUser,
-  registerUser
+  registerUser,
 } = require("../controllers/userController.js");
+const { admin, protect } = require("../middleware/auth.js");
 
 const router = express.Router();
 
-router.route("/").post(registerUser).get(getUsers)
-router.post('/login',authUser)
-router.post('/logout',logoutUser)
-router.route('/profile').get(getUserProfile).put(updateUserProfile)
-router.route('/:id').get(getUserById).put(updateUser).delete(deleteUser)
+// Define routes
+router.route("/").post(registerUser).get(protect, admin, getUsers);
+router.post("/login", authUser);
+router.post("/logout", logoutUser);
+router.route("/profile").get(protect, getUserProfile).put(protect, updateUserProfile);
+router.route("/:id").get(protect, admin, getUserById).put(protect, admin, updateUser).delete(protect, admin, deleteUser);
 
-module.export =  router;
+// Export router
+module.exports = router;

@@ -1,23 +1,26 @@
-const express = require('express')
-const { getMosques, getMosque, createMosque, updateMosque,
-    deleteMosque, uploadImage } = require('../controllers/mosqueController.js')
+const express = require("express");
+const {
+  getMosques,
+  getMosque,
+  createMosque,
+  updateMosque,
+  deleteMosque,
+  uploadImage,
+} = require("../controllers/mosqueController.js");
 
-const router = express.Router()
+const { admin, protect } = require("../middleware/auth.js");
+
+const router = express.Router();
+
+router.route("/").get(protect, getMosques).post(protect, admin, createMosque);
 
 router
-    .route('/')
-    .get(getMosques)
-    .post(createMosque)
-
-router
-    .route('/:id')
-    .get(getMosque)
-    .put(updateMosque)
-    .delete(deleteMosque)
+  .route("/:id")
+  .get(protect, getMosque)
+  .put(protect, admin, updateMosque)
+  .delete(protect, admin, deleteMosque);
 
 // Route for uploading images
-router
-    .route('/upload')
-    .post(uploadImage);
+router.route("/upload").post(uploadImage);
 
-module.exports = router
+module.exports = router;
