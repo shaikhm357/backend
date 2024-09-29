@@ -176,7 +176,7 @@ const getUserById = asyncHandler(async (req, res) => {
 // @route   Put /api/users/:id
 // @access  Private/admin
 const updateUser = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id); // Find the user by ID
+  const user = await User.findById(req.params.id); // Find the user by ID
 
   if (user) {
     // Update each field only if it's provided in the request body, otherwise retain the existing value

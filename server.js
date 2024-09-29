@@ -38,6 +38,11 @@ if (process.env.NODE_ENV == "development") {
   app.use(morgan("dev"));
 }
 
+// Route for the home page to serve index.html
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 // mount routers
 app.use("/api/v1/mosque", mosque);
 app.use("/api/v1/users", userRoutes);

@@ -1,0 +1,1108 @@
+{
+	"info": {
+		"_postman_id": "0f43aeb1-7ce4-44a9-ba9d-a90817257d9c",
+		"name": "salah spectrum",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14811809"
+	},
+	"item": [
+		{
+			"name": "Mosque",
+			"item": [
+				{
+					"name": "Get all mosque",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/mosque",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosque"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/mosque",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mosque"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1941"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"795-0dHrdEu/h22xgg0C5f1v8XwiqfE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 17:49:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"count\": 3,\n    \"data\": [\n        {\n            \"todayNamazTimings\": {\n                \"fazar\": \"05:30 AM\",\n                \"zohar\": \"01:15 PM\",\n                \"asr\": \"04:30 PM\",\n                \"magrib\": \"06:45 PM\",\n                \"isha\": \"08:15 PM\"\n            },\n            \"jummaTimings\": {\n                \"numberOfJammat\": 2,\n                \"timings\": [\n                    \"12:30 PM\",\n                    \"01:30 PM\"\n                ]\n            },\n            \"eidUlAdhaTimings\": {\n                \"numberOfJammat\": 3,\n                \"timings\": [\n                    \"06:30 AM\",\n                    \"07:30 AM\",\n                    \"08:30 AM\"\n                ]\n            },\n            \"eidUlFitrTimings\": {\n                \"numberOfJammat\": 3,\n                \"timings\": [\n                    \"06:00 AM\",\n                    \"07:00 AM\",\n                    \"08:00 AM\"\n                ]\n            },\n            \"_id\": \"66f3bb5745fc51ef1dee15a9\",\n            \"image\": \"https://example.com/mosque.jpg\",\n            \"name\": \"Tawheed Ulwe Masjid\",\n            \"address\": \"Shop 10, At Post Cowk, Raj Heritage, Plot No 183, Taluka, Next to Bank of India, Sector 19, Ulwe Navi Mumbai Maharashtra 410206\",\n            \"createdAt\": \"2024-09-25T07:27:19.279Z\",\n            \"updatedAt\": \"2024-09-25T07:27:19.279Z\",\n            \"__v\": 0\n        },\n        {\n            \"todayNamazTimings\": {\n                \"fazar\": \"05:25 AM\",\n                \"zohar\": \"01:10 PM\",\n                \"asr\": \"04:20 PM\",\n                \"magrib\": \"06:35 PM\",\n                \"isha\": \"08:10 PM\"\n            },\n            \"jummaTimings\": {\n                \"numberOfJammat\": 2,\n                \"timings\": [\n                    \"12:50 PM\",\n                    \"01:50 PM\"\n                ]\n            },\n            \"eidUlAdhaTimings\": {\n                \"numberOfJammat\": 3,\n                \"timings\": [\n                    \"06:00 AM\",\n                    \"07:00 AM\",\n                    \"08:00 AM\"\n                ]\n            },\n            \"eidUlFitrTimings\": {\n                \"numberOfJammat\": 1,\n                \"timings\": [\n                    \"06:30 AM\"\n                ]\n            },\n            \"_id\": \"66f3efc8b446b2fea6a4912f\",\n            \"image\": \"https://example.com/masjid2.jpg\",\n            \"name\": \"Al-Furqan Masjid\",\n            \"address\": \"Sector 15, Block 12, Near Park, Navi Mumbai, Maharashtra 410220\",\n            \"createdAt\": \"2024-09-25T11:11:04.784Z\",\n            \"updatedAt\": \"2024-09-25T11:11:04.784Z\",\n            \"__v\": 0\n        },\n        {\n            \"todayNamazTimings\": {\n                \"fazar\": \"05:20 AM\",\n                \"zohar\": \"01:20 PM\",\n                \"asr\": \"04:40 PM\",\n                \"magrib\": \"06:50 PM\",\n                \"isha\": \"08:20 PM\"\n            },\n            \"jummaTimings\": {\n                \"numberOfJammat\": 3,\n                \"timings\": [\n                    \"12:40 PM\",\n                    \"01:40 PM\",\n                    \"02:40 PM\"\n                ]\n            },\n            \"eidUlAdhaTimings\": {\n                \"numberOfJammat\": 2,\n                \"timings\": [\n                    \"06:20 AM\",\n                    \"07:20 AM\"\n                ]\n            },\n            \"eidUlFitrTimings\": {\n                \"numberOfJammat\": 3,\n                \"timings\": [\n                    \"06:10 AM\",\n                    \"07:10 AM\",\n                    \"08:10 AM\"\n                ]\n            },\n            \"_id\": \"66f3efd9b446b2fea6a49131\",\n            \"image\": \"https://example.com/masjid3.jpg\",\n            \"name\": \"Masjid Usman\",\n            \"address\": \"Shop 25, Building 5, Sector 7, Nerul, Navi Mumbai, Maharashtra 410207\",\n            \"createdAt\": \"2024-09-25T11:11:21.145Z\",\n            \"updatedAt\": \"2024-09-25T11:11:21.145Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get mosque by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/mosque/66f3bb5745fc51ef1dee15a9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosque",
+								"66f3bb5745fc51ef1dee15a9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/mosque/66f3bb5745fc51ef1dee15a9",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mosque",
+										"66f3bb5745fc51ef1dee15a9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1914"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"77a-hiK0qVY0FwaQlrVwMQlHVYa0lDw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 17:50:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"todayNamazTimings\": {\n            \"fazar\": \"05:30 AM\",\n            \"zohar\": \"01:15 PM\",\n            \"asr\": \"04:30 PM\",\n            \"magrib\": \"06:45 PM\",\n            \"isha\": \"08:15 PM\"\n        },\n        \"jummaTimings\": {\n            \"numberOfJammat\": 2,\n            \"timings\": [\n                \"12:30 PM\",\n                \"01:30 PM\"\n            ]\n        },\n        \"eidUlAdhaTimings\": {\n            \"numberOfJammat\": 3,\n            \"timings\": [\n                \"06:30 AM\",\n                \"07:30 AM\",\n                \"08:30 AM\"\n            ]\n        },\n        \"eidUlFitrTimings\": {\n            \"numberOfJammat\": 3,\n            \"timings\": [\n                \"06:00 AM\",\n                \"07:00 AM\",\n                \"08:00 AM\"\n            ]\n        },\n        \"_id\": \"66f3bb5745fc51ef1dee15a9\",\n        \"image\": \"https://example.com/mosque.jpg\",\n        \"name\": \"Tawheed Ulwe Masjid\",\n        \"address\": \"Shop 10, At Post Cowk, Raj Heritage, Plot No 183, Taluka, Next to Bank of India, Sector 19, Ulwe Navi Mumbai Maharashtra 410206\",\n        \"createdAt\": \"2024-09-25T07:27:19.279Z\",\n        \"updatedAt\": \"2024-09-25T07:27:19.279Z\",\n        \"__v\": 0,\n        \"fetchedTimes\": {\n            \"timings\": {\n                \"Fajr\": \"05:03\",\n                \"Sunrise\": \"06:15\",\n                \"Dhuhr\": \"12:15\",\n                \"Asr\": \"16:37\",\n                \"Sunset\": \"18:26\",\n                \"Maghrib\": \"18:16\",\n                \"Isha\": \"19:29\",\n                \"Imsak\": \"04:51\",\n                \"Midnight\": \"00:20\",\n                \"Firstthird\": \"22:22\",\n                \"Lastthird\": \"02:18\"\n            },\n            \"date\": {\n                \"readable\": \"18 Sep 2024\",\n                \"timestamp\": \"1726623000\",\n                \"hijri\": {\n                    \"date\": \"14-03-1446\",\n                    \"format\": \"DD-MM-YYYY\",\n                    \"day\": \"14\",\n                    \"weekday\": {\n                        \"en\": \"Al Arba'a\",\n                        \"ar\": \"الاربعاء\"\n                    },\n                    \"month\": {\n                        \"number\": 3,\n                        \"en\": \"Rabīʿ al-awwal\",\n                        \"ar\": \"رَبيع الأوّل\"\n                    },\n                    \"year\": \"1446\",\n                    \"designation\": {\n                        \"abbreviated\": \"AH\",\n                        \"expanded\": \"Anno Hegirae\"\n                    },\n                    \"holidays\": []\n                },\n                \"gregorian\": {\n                    \"date\": \"18-09-2024\",\n                    \"format\": \"DD-MM-YYYY\",\n                    \"day\": \"18\",\n                    \"weekday\": {\n                        \"en\": \"Wednesday\"\n                    },\n                    \"month\": {\n                        \"number\": 9,\n                        \"en\": \"September\"\n                    },\n                    \"year\": \"2024\",\n                    \"designation\": {\n                        \"abbreviated\": \"AD\",\n                        \"expanded\": \"Anno Domini\"\n                    }\n                }\n            },\n            \"meta\": {\n                \"latitude\": 1.234567,\n                \"longitude\": 2.34567,\n                \"timezone\": \"Asia/Kolkata\",\n                \"method\": {\n                    \"id\": 1,\n                    \"name\": \"University of Islamic Sciences, Karachi\",\n                    \"params\": {\n                        \"Fajr\": 18,\n                        \"Isha\": 18\n                    },\n                    \"location\": {\n                        \"latitude\": 24.8614622,\n                        \"longitude\": 67.0099388\n                    }\n                },\n                \"latitudeAdjustmentMethod\": \"ANGLE_BASED\",\n                \"midnightMode\": \"STANDARD\",\n                \"school\": \"HANAFI\",\n                \"offset\": {\n                    \"Imsak\": 0,\n                    \"Fajr\": \"2\",\n                    \"Sunrise\": \"1\",\n                    \"Dhuhr\": \"-5\",\n                    \"Asr\": \"-7\",\n                    \"Maghrib\": \"-10\",\n                    \"Sunset\": 0,\n                    \"Isha\": \"-10\",\n                    \"Midnight\": 0\n                }\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Mosque",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"image\": \"https://example.com/images/mosque.jpg\",\n    \"name\": \"Masjid Al-Noor\",\n    \"address\": \"123 Main Street, Downtown, City, 12345\",\n    \"todayNamazTimings\": {\n        \"fazar\": \"05:30 AM\",\n        \"zohar\": \"01:15 PM\",\n        \"asr\": \"04:30 PM\",\n        \"magrib\": \"06:45 PM\",\n        \"isha\": \"08:15 PM\"\n    },\n    \"jummaTimings\": {\n        \"numberOfJammat\": 2,\n        \"timings\": [\n            \"12:30 PM\",\n            \"01:30 PM\"\n        ]\n    },\n    \"eidUlAdhaTimings\": {\n        \"numberOfJammat\": 3,\n        \"timings\": [\n            \"06:30 AM\",\n            \"07:30 AM\",\n            \"08:30 AM\"\n        ]\n    },\n    \"eidUlFitrTimings\": {\n        \"numberOfJammat\": 3,\n        \"timings\": [\n            \"06:00 AM\",\n            \"07:00 AM\",\n            \"08:00 AM\"\n        ]\n    },\n    \"createdAt\": \"2024-09-25T07:27:19.279Z\",\n    \"updatedAt\": \"2024-09-25T07:27:19.279Z\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/mosque",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosque"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create mosque",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"image\": \"https://example.com/images/mosque.jpg\",\n    \"name\": \"Masjid Al-Noor\",\n    \"address\": \"123 Main Street, Downtown, City, 12345\",\n    \"todayNamazTimings\": {\n        \"fazar\": \"05:30 AM\",\n        \"zohar\": \"01:15 PM\",\n        \"asr\": \"04:30 PM\",\n        \"magrib\": \"06:45 PM\",\n        \"isha\": \"08:15 PM\"\n    },\n    \"jummaTimings\": {\n        \"numberOfJammat\": 2,\n        \"timings\": [\n            \"12:30 PM\",\n            \"01:30 PM\"\n        ]\n    },\n    \"eidUlAdhaTimings\": {\n        \"numberOfJammat\": 3,\n        \"timings\": [\n            \"06:30 AM\",\n            \"07:30 AM\",\n            \"08:30 AM\"\n        ]\n    },\n    \"eidUlFitrTimings\": {\n        \"numberOfJammat\": 3,\n        \"timings\": [\n            \"06:00 AM\",\n            \"07:00 AM\",\n            \"08:00 AM\"\n        ]\n    },\n    \"createdAt\": \"2024-09-25T07:27:19.279Z\",\n    \"updatedAt\": \"2024-09-25T07:27:19.279Z\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/mosque",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mosque"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "622"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26e-m2ebdFSO2wAHk1X5ib0sd/rcuZA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 17:52:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"image\": \"https://example.com/images/mosque.jpg\",\n        \"name\": \"Masjid Al-Noor\",\n        \"address\": \"123 Main Street, Downtown, City, 12345\",\n        \"todayNamazTimings\": {\n            \"fazar\": \"05:30 AM\",\n            \"zohar\": \"01:15 PM\",\n            \"asr\": \"04:30 PM\",\n            \"magrib\": \"06:45 PM\",\n            \"isha\": \"08:15 PM\"\n        },\n        \"jummaTimings\": {\n            \"numberOfJammat\": 2,\n            \"timings\": [\n                \"12:30 PM\",\n                \"01:30 PM\"\n            ]\n        },\n        \"eidUlAdhaTimings\": {\n            \"numberOfJammat\": 3,\n            \"timings\": [\n                \"06:30 AM\",\n                \"07:30 AM\",\n                \"08:30 AM\"\n            ]\n        },\n        \"eidUlFitrTimings\": {\n            \"numberOfJammat\": 3,\n            \"timings\": [\n                \"06:00 AM\",\n                \"07:00 AM\",\n                \"08:00 AM\"\n            ]\n        },\n        \"_id\": \"66f993cb4c799bf7471929e8\",\n        \"createdAt\": \"2024-09-25T07:27:19.279Z\",\n        \"updatedAt\": \"2024-09-25T07:27:19.279Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Mosque",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"image\": \"https://example.com/images/mosque.jpg\",\n    \"name\": \"Masjid Al-Nooraniya\",\n    \"address\": \"123 Main Street, Downtown, City, 12345\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/mosque/66f993cb4c799bf7471929e8",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosque",
+								"66f993cb4c799bf7471929e8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update mosque",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"image\": \"https://example.com/images/mosque.jpg\",\n    \"name\": \"Masjid Al-Nooraniya\",\n    \"address\": \"123 Main Street, Downtown, City, 12345\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/mosque/66f993cb4c799bf7471929e8",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mosque",
+										"66f993cb4c799bf7471929e8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "627"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"273-wlkpG9ZzEIdAgbhNWa48zrbUV74\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 17:54:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"todayNamazTimings\": {\n            \"fazar\": \"05:30 AM\",\n            \"zohar\": \"01:15 PM\",\n            \"asr\": \"04:30 PM\",\n            \"magrib\": \"06:45 PM\",\n            \"isha\": \"08:15 PM\"\n        },\n        \"jummaTimings\": {\n            \"numberOfJammat\": 2,\n            \"timings\": [\n                \"12:30 PM\",\n                \"01:30 PM\"\n            ]\n        },\n        \"eidUlAdhaTimings\": {\n            \"numberOfJammat\": 3,\n            \"timings\": [\n                \"06:30 AM\",\n                \"07:30 AM\",\n                \"08:30 AM\"\n            ]\n        },\n        \"eidUlFitrTimings\": {\n            \"numberOfJammat\": 3,\n            \"timings\": [\n                \"06:00 AM\",\n                \"07:00 AM\",\n                \"08:00 AM\"\n            ]\n        },\n        \"_id\": \"66f993cb4c799bf7471929e8\",\n        \"image\": \"https://example.com/images/mosque.jpg\",\n        \"name\": \"Masjid Al-Nooraniya\",\n        \"address\": \"123 Main Street, Downtown, City, 12345\",\n        \"createdAt\": \"2024-09-25T07:27:19.279Z\",\n        \"updatedAt\": \"2024-09-29T17:54:22.078Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete mosque",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/mosqque/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosqque",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload img",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/coder/Desktop/angular_course_v18/src/assets/task-management-logo.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/mosque/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosque",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/coder/Desktop/angular_course_v18/src/assets/task-management-logo.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/mosque/upload",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"mosque",
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "91"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5b-hYiHTxqCgP+z02ebFzGOR0fjzYI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:29:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"fileUrl\": \"http://localhost:5000/uploads/image-1727634561141.png\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"jane.smith@example.com\",\n    \"password\" : \"securePass456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\" : \"jane.smith@example.com\",\n    \"password\" : \"securePass456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/users/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmY5OTYwYTRjNzk5YmY3NDcxOTI5ZjQiLCJpYXQiOjE3Mjc2MzMwMjMsImV4cCI6MTczMDIyNTAyM30.bY7FxTorc6xsI5kbZ-nkzNWgqxS2koSs_4zYvmT2MQE; Max-Age=2592000; Path=/; Expires=Tue, 29 Oct 2024 18:03:43 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "289"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"121-6X59FilgOKrC22K7L38l49bCoWs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:03:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"full_name\": \"Jane Smith\",\n    \"email\": \"jane.smith@example.com\",\n    \"isAdmin\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Zjk5NjBhNGM3OTliZjc0NzE5MjlmNCIsImlhdCI6MTcyNzYzMzAyMywiZXhwIjoxNzMwMjI1MDIzfQ.4q21G94o_qgTz3tJv3AdqMbctNYJ_n3j2lqSzcl9hQs\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "560"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"230-XOvrT7R9Dk/QmRHA7sXB4Wp1zsk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:04:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"66f9960a4c799bf7471929f4\",\n        \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n        \"full_name\": \"Jane Smith\",\n        \"date_of_birth\": \"1985-11-25T00:00:00.000Z\",\n        \"gender\": \"female\",\n        \"mobile_no\": \"9123456789\",\n        \"email\": \"jane.smith@example.com\",\n        \"highest_qualification\": \"Master's Degree in Business Administration\",\n        \"working_with\": \"Government/Public Sector\",\n        \"working_as\": \"Project Manager\",\n        \"country\": \"India\",\n        \"state\": \"Delhi\",\n        \"city\": \"New Delhi\",\n        \"location\": \"Belapur\",\n        \"isAdmin\": true,\n        \"password\": \"$2a$10$Y241OT9YKU3tDqp/yzPlQuubDrHdEQJkT4CptktIF9qHI9qNUF.ti\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane Smith bantai\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/66f9960a4c799bf7471929f4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"66f9960a4c799bf7471929f4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update user",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane Smith bantai\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/users/66f9960a4c799bf7471929f4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"66f9960a4c799bf7471929f4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "665"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"299-uoKAdRg717yeBgSRT1ByzkKy2MQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:10:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane Smith bantai\",\n    \"date_of_birth\": \"1985-11-25T00:00:00.000Z\",\n    \"gender\": \"female\",\n    \"mobile_no\": \"9123456789\",\n    \"email\": \"jane.smith@example.com\",\n    \"highest_qualification\": \"Master's Degree in Business Administration\",\n    \"working_with\": \"Government/Public Sector\",\n    \"working_as\": \"Project Manager\",\n    \"country\": \"India\",\n    \"state\": \"Delhi\",\n    \"city\": \"New Delhi\",\n    \"location\": \"Belapur\",\n    \"isAdmin\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Zjk5NjBhNGM3OTliZjc0NzE5MjlmNCIsImlhdCI6MTcyNzYzMzQ0NywiZXhwIjoxNzMwMjI1NDQ3fQ.jHvDg1MysFqqysaEK43knHG0-FcMc_k7J1gaO4ZIKvc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/mosque/66f3bb5745fc51ef1dee15a9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"mosque",
+								"66f3bb5745fc51ef1dee15a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/users/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get user profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/users/profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "565"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"235-0HR2vtEmqwdaJk+CQGlQt0YYKrM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:11:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane Smith bantai\",\n    \"date_of_birth\": \"1985-11-25T00:00:00.000Z\",\n    \"gender\": \"female\",\n    \"mobile_no\": \"9123456789\",\n    \"email\": \"jane.smith@example.com\",\n    \"highest_qualification\": \"Master's Degree in Business Administration\",\n    \"working_with\": \"Government/Public Sector\",\n    \"working_as\": \"Project Manager\",\n    \"country\": \"India\",\n    \"state\": \"Delhi\",\n    \"city\": \"New Delhi\",\n    \"location\": \"Belapur\",\n    \"isAdmin\": true,\n    \"password\": \"$2a$10$Y241OT9YKU3tDqp/yzPlQuubDrHdEQJkT4CptktIF9qHI9qNUF.ti\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update user profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane bantai\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update user profile",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane bantai\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/users/profile",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "644"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"284-o3h4qprWZ9EMuOfgLVeWSbpkeAc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:13:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane bantai\",\n    \"date_of_birth\": \"1985-11-25T00:00:00.000Z\",\n    \"gender\": \"female\",\n    \"mobile_no\": \"9123456789\",\n    \"email\": \"jane.smith@example.com\",\n    \"highest_qualification\": \"Master's Degree in Business Administration\",\n    \"working_with\": \"Government/Public Sector\",\n    \"working_as\": \"Project Manager\",\n    \"country\": \"India\",\n    \"state\": \"Delhi\",\n    \"city\": \"New Delhi\",\n    \"location\": \"Belapur\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Zjk5NjBhNGM3OTliZjc0NzE5MjlmNCIsImlhdCI6MTcyNzYzMzU5NiwiZXhwIjoxNzMwMjI1NTk2fQ.DSOXhddkWrq8m1TFwZX60ZGGN68nCDAL2EqEWazE-mg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/users/66f3bb5745fc51ef1dee15a9",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"66f3bb5745fc51ef1dee15a9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/users/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/v1/users/logout",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "jwt=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-71uUsMgZY3FdZp9j1h5YMrBIOgg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:13:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Logged out successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane Smith\",\n    \"date_of_birth\": \"1985-11-25T00:00:00.000Z\",\n    \"gender\": \"female\",\n    \"mobile_no\": \"9123456789\",\n    \"email\": \"jane.smith@example.com\",\n    \"highest_qualification\": \"Master's Degree in Business Administration\",\n    \"working_with\": \"Government/Public Sector\",\n    \"working_as\": \"Project Manager\",\n    \"country\": \"India\",\n    \"state\": \"Delhi\",\n    \"city\": \"New Delhi\",\n    \"location\": \"Belapur\",\n    \"isAdmin\": true,\n    \"password\": \"securePass456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "register user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"profile_picture\": \"https://example.com/profile-pictures/user2.jpg\",\n    \"full_name\": \"Jane Smith\",\n    \"date_of_birth\": \"1985-11-25T00:00:00.000Z\",\n    \"gender\": \"female\",\n    \"mobile_no\": \"9123456789\",\n    \"email\": \"jane.smith@example.com\",\n    \"highest_qualification\": \"Master's Degree in Business Administration\",\n    \"working_with\": \"Government/Public Sector\",\n    \"working_as\": \"Project Manager\",\n    \"country\": \"India\",\n    \"state\": \"Delhi\",\n    \"city\": \"New Delhi\",\n    \"location\": \"Belapur\",\n    \"isAdmin\": true,\n    \"password\": \"securePass456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"108-tcjT2PEcnlT57Xp7kPed8pdaoxw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 29 Sep 2024 18:01:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"66f9960a4c799bf7471929f4\",\n    \"email\": \"jane.smith@example.com\",\n    \"isAdmin\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Zjk5NjBhNGM3OTliZjc0NzE5MjlmNCIsImlhdCI6MTcyNzYzMjkwNiwiZXhwIjoxNzMwMjI0OTA2fQ.gnKzu6ayguKkYD2vlsar6M2YDECwLlxUpaYV2zK3TcM\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
