@@ -1,127 +1,151 @@
-const multer = require('multer');
-const path = require('path');
-const asyncHandler = require("../middleware/async")
-const Mosque = require("../models/Mosque")
+const multer = require("multer");
+const path = require("path");
+const asyncHandler = require("../middleware/async");
+const Mosque = require("../models/Mosque");
+const axios = require("axios");
 
 // @desc    Get all Mosques
 // @route   GET /api/v1/Mosque
 // @access  Public
 exports.getMosques = asyncHandler(async (req, res, next) => {
-    const mosque = await Mosque.find()
-    res.status(200).json({
-        success: true,
-        count: mosque.length,
-        data: mosque
-    })
-})
+  const mosque = await Mosque.find();
+  res.status(200).json({
+    success: true,
+    count: mosque.length,
+    data: mosque,
+  });
+});
 
 // @desc    Get a single Mosque
 // @route   GET /api/v1/Mosque/:id
 // @access  Public
 exports.getMosque = asyncHandler(async (req, res, next) => {
-    const mosque = await Mosque.findById(req.params.id)
+  const mosque = await Mosque.findById(req.params.id);
 
-    if (!mosque) {
-        return res.status(400).json({ success: false })
-    }
+  if (!mosque) {
+    return res.status(400).json({ success: false });
+  }
 
-    res.status(200).json({
-        success: true,
-        data: mosque
-    })
-})
+  // Get address from the mosque data
+  const address = mosque.address;
+
+  // Make API call to fetch namaz timings based on the mosque's address
+  const aladhanResponse = await axios.get(
+    `https://api.aladhan.com/v1/timingsByAddress/18-09-2024?address=${encodeURIComponent(
+      address
+    )}&school=1&tune=0,2,1,-5,-7,-10,0,-10,0`
+  );
+
+  // Combine mosque data and fetched times into a single `data` object
+  res.status(200).json({
+    success: true,
+    data: {
+      ...mosque._doc, // Spread the mosque data into the data object
+      fetchedTimes: aladhanResponse.data.data, // Add the fetched times from the API response
+    },
+  });
+});
 
 // @desc    Create new Mosque
 // @route   POST /api/v1/Mosque
 // @access  Public
 exports.createMosque = asyncHandler(async (req, res, next) => {
-    const mosque = await Mosque.create(req.body)
-    res.status(201).json({ success: true, data: mosque })
-})
+  const mosque = await Mosque.create(req.body);
+  res.status(201).json({ success: true, data: mosque });
+});
 
 // @desc    Update Mosque
 // @route   PUT /api/v1/Mosque/:id
 // @access  Public
 exports.updateMosque = asyncHandler(async (req, res, next) => {
-    const mosque = await Mosque.findByIdAndUpdate(req.params.id, req.body, {
-        new: true,
-        runValidators: true
-    })
+  const mosque = await Mosque.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true,
+  });
 
-    if (!mosque) {
-        return res.status(400).json({ success: false })
-    }
+  if (!mosque) {
+    return res.status(400).json({ success: false });
+  }
 
-    res.status(200).json({ success: true, data: mosque })
-})
+  res.status(200).json({ success: true, data: mosque });
+});
 
 // @desc    Delete Mosque
 // @route   DELETE /api/v1/Mosque/:id
 // @access  Public
 exports.deleteMosque = asyncHandler(async (req, res, next) => {
-    const mosque = await Mosque.findByIdAndDelete(req.params.id)
+  const mosque = await Mosque.findByIdAndDelete(req.params.id);
 
-    if (!mosque) {
-        return res.status(400).json({ success: false })
-    }
+  if (!mosque) {
+    return res.status(400).json({ success: false });
+  }
 
-    res.status(200).json({ success: true, data: mosque })
-})
-
+  res.status(200).json({ success: true, data: mosque });
+});
 
 // Set up the storage location and file names for uploaded images
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'public/uploads');  // Specify the folder to save images
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));  // Use the original file extension
-    }
+  destination: function (req, file, cb) {
+    cb(null, "public/uploads"); // Specify the folder to save images
+  },
+  filename: function (req, file, cb) {
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    ); // Use the original file extension
+  },
 });
 
 // Set up multer with the storage configuration
 const upload = multer({
-    storage: storage,
-    limits: { fileSize: 5 * 1024 * 1024 }, // Limit to 5MB
-    fileFilter: function (req, file, cb) {
-        const filetypes = /jpeg|jpg|png/; // Allow only image formats (jpg, jpeg, png)
-        const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-        const mimetype = filetypes.test(file.mimetype);
+  storage: storage,
+  limits: { fileSize: 5 * 1024 * 1024 }, // Limit to 5MB
+  fileFilter: function (req, file, cb) {
+    const filetypes = /jpeg|jpg|png/; // Allow only image formats (jpg, jpeg, png)
+    const extname = filetypes.test(
+      path.extname(file.originalname).toLowerCase()
+    );
+    const mimetype = filetypes.test(file.mimetype);
 
-        if (mimetype && extname) {
-            return cb(null, true);
-        } else {
-            cb(new Error('Only images are allowed'));
-        }
+    if (mimetype && extname) {
+      return cb(null, true);
+    } else {
+      cb(new Error("Only images are allowed"));
     }
+  },
 });
-
 
 // @desc    Upload an image
 // @route   POST /api/v1/upload
 // @access  Public
 exports.uploadImage = (req, res) => {
-    // Multer will handle the file upload, no need for asyncHandler
-    upload.single('image')(req, res, function (err) {
-        // Handle any errors from multer
-        if (err instanceof multer.MulterError) {
-            return res.status(500).json({ success: false, message: err.message });
-        } else if (err) {
-            return res.status(500).json({ success: false, message: 'File upload failed' });
-        }
+  // Multer will handle the file upload, no need for asyncHandler
+  upload.single("image")(req, res, function (err) {
+    // Handle any errors from multer
+    if (err instanceof multer.MulterError) {
+      return res.status(500).json({ success: false, message: err.message });
+    } else if (err) {
+      return res
+        .status(500)
+        .json({ success: false, message: "File upload failed" });
+    }
 
-        // Check if a file has been uploaded
-        if (!req.file) {
-            return res.status(400).json({ success: false, message: 'No file uploaded' });
-        }
+    // Check if a file has been uploaded
+    if (!req.file) {
+      return res
+        .status(400)
+        .json({ success: false, message: "No file uploaded" });
+    }
 
-        // File upload successful, send the response with the file URL
-        const fileUrl = `${req.protocol}://${req.get('host')}/uploads/${req.file.filename}`;
-        res.status(200).json({
-            success: true,
-            data: {
-                fileUrl: fileUrl,  // Full URL to access the image
-            },
-        });
+    // File upload successful, send the response with the file URL
+    const fileUrl = `${req.protocol}://${req.get("host")}/uploads/${
+      req.file.filename
+    }`;
+    res.status(200).json({
+      success: true,
+      data: {
+        fileUrl: fileUrl, // Full URL to access the image
+      },
     });
+  });
 };
